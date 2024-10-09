@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class AgeValidity {
 
     public static void main(String[] args) {
-    	Scanner sc = new Scanner(System.in);
+    	
        int age = sc.nextInt(19);
        
        Boolean drivingUnderAge = false;
