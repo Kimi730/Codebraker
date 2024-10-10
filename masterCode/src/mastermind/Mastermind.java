@@ -32,56 +32,76 @@ public class Mastermind {
 		String gok3;
 		String gok4;
 
-		String ans1;
-		String ans2;
-		String ans3;
-		String ans4;
-
-		for (int round = 1; round <= 10; round++) {
+		String ans1 = black;
+		String ans2 = black;
+		String ans3 = black;
+		String ans4 = black;
+		
+		for (int round = 0; round <= 10; round++) {
+			
+			
 			gok1 = sc.next();
 			gok2 = sc.next();
 			gok3 = sc.next();
 			gok4 = sc.next();
-
+			
 			System.out.println("Round "+ round);
 
 			if (gok1.equals(code1)) {
-				System.out.print("X");
+				System.out.print(black);
 			} else {
-				System.out.print("W");
+				System.out.print(white);
 			}
+			
 			if (gok2.equals(code2)) {
-				System.out.print("X");
+				System.out.print(black);
 			} else {
-				System.out.print("W");
+				System.out.print(white);
 			}
-
+			
 			if (gok3.equals(code3)) {
-				System.out.print("X");
+				System.out.print(black);
 			} else {
-				System.out.print("W");
+				System.out.print(white);
 			}
-
+			
 			if (gok4.equals(code4)) {
-				System.out.print("X");
+				System.out.print(black);
 			} else {
-				System.out.print("W");
+				System.out.print(white);
 			}
-		    
+			if ( gok1.equals(purple)) {
+				System.out.println("");
+			}
+			
+			if ( gok2.equals(purple)) {
+				System.out.println("");
+			}
+			
+			if ( gok3.equals(purple)) {
+				System.out.println("");
+			}
+			
+			if ( gok4.equals(purple)) {
+				System.out.println("");
+			}
+			
+			String code1234 = code1 + code2 + code3 + code4;
+			String ans1234 = ans1 + ans2 + ans3 + ans4;
+			if ( code1234.equals(ans1234)) {
+				System.out.println("Gongratulations");
+			}
+			
+		
+	
+			
+			}
+		
+		
+			
 		}
-		if (gok1.equals(purple)); {
-			System.out.println("");
-		}
-		if (gok2.equals(purple)); {
-			System.out.println("");
-		}
-		if (gok3.equals(purple)); {
-			System.out.println("");
-		}
-		if (gok4.equals(purple)); {
-			System.out.println("");
-		}
-
-	}
-
 }
+	
+
+
+
