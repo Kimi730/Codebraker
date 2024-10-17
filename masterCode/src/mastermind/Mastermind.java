@@ -9,8 +9,8 @@ public class Mastermind {
 
 		System.out.println("Welcome to Mastermind,Pick four colors,You have 10 chances");
 		System.out.println("Pickable colors: R,Y,G,B,P");
-		System.out.println(
-				"If you get a X, its means you have it at the right place, if its W, its means its at the wrong place and none of both means it doesn't exist.");
+		System.out.println("If you get a X, its means you have it at the right place, if its W, its means its at the wrong place and none of both means it doesn't exist.");
+		System.out.println("Turn on caps lock, type in one line with spaces");
 
 		String red = "R";
 		String yellow = "Y";
@@ -22,86 +22,84 @@ public class Mastermind {
 
 		Scanner sc = new Scanner(System.in);
 
-		String code1 = red;
-		String code2 = red;
+		String code1 = yellow;
+		String code2 = green;
 		String code3 = blue;
-		String code4 = blue;
+		String code4 = red;
 
 		String gok1;
 		String gok2;
 		String gok3;
 		String gok4;
-
-		String ans1 = black;
-		String ans2 = black;
-		String ans3 = black;
-		String ans4 = black;
 		
-		for (int round = 0; round <= 10; round++) {
-			
-			
+		for (int round = 1; round <= 10; round++) {
+
 			gok1 = sc.next();
 			gok2 = sc.next();
 			gok3 = sc.next();
 			gok4 = sc.next();
-			
-			System.out.println("Round "+ round);
+
+			System.out.println("Round " + round);
 
 			if (gok1.equals(code1)) {
 				System.out.print(black);
-			} else {
+			} else if (gok1.equals(code2)) {
 				System.out.print(white);
+			} else if (gok1.equals(code3)){
+				System.out.print(white);
+			} else if (gok1.equals(code4)) {
+				System.out.print(white);
+			} else {
+				System.out.print(" ");
 			}
 			
 			if (gok2.equals(code2)) {
 				System.out.print(black);
-			} else {
+			} else if (gok2.equals(code1)) {
 				System.out.print(white);
+			} else if (gok2.equals(code3)){
+				System.out.print(white);
+			} else if (gok2.equals(code4)) {
+				System.out.print(white);
+			} else {
+				System.out.print(" ");
 			}
+
 			
 			if (gok3.equals(code3)) {
 				System.out.print(black);
-			} else {
+			} else if (gok3.equals(code1)) {
 				System.out.print(white);
+			} else if (gok3.equals(code2)){
+				System.out.print(white);
+			} else if (gok3.equals(code4)) {
+				System.out.print(white);
+			} else {
+				System.out.print(" ");
 			}
-			
+
 			if (gok4.equals(code4)) {
 				System.out.print(black);
-			} else {
+			} else if (gok4.equals(code1)) {
 				System.out.print(white);
+			} else if (gok4.equals(code2)){
+				System.out.print(white);
+			} else if (gok4.equals(code3)) {
+				System.out.print(white);
+			} else {
+				System.out.print(" ");
 			}
-			if ( gok1.equals(purple)) {
-				System.out.println("");
-			}
-			
-			if ( gok2.equals(purple)) {
-				System.out.println("");
-			}
-			
-			if ( gok3.equals(purple)) {
-				System.out.println("");
-			}
-			
-			if ( gok4.equals(purple)) {
-				System.out.println("");
-			}
-			
+
+			System.out.println("");
+			String allesgoed = gok1 + gok2 + gok3 + gok4;
 			String code1234 = code1 + code2 + code3 + code4;
-			String ans1234 = ans1 + ans2 + ans3 + ans4;
-			if ( code1234.equals(ans1234)) {
-				System.out.println("Gongratulations");
+			if (code1234.equals(allesgoed)) {
+				System.out.println("Gongratulations ! ! !");
+				break;
 			}
-			
-		
-	
-			
+			if (round>=10) {
+				System.out.println("You lost ! ! !");
 			}
-		
-		
-			
 		}
+    }
 }
-	
-
-
-
