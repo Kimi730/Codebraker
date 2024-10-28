@@ -8,8 +8,8 @@ public class Mastermind {
 		// TODO Auto-generated method stub
 
 		System.out.println("Welcome to Mastermind,Pick four colors,You have 10 chances");
-		System.out.println("If you get a X, its means you have it at the right place, if its W, its means its at the wrong place and none of both means it doesn't exist.");
-		System.out.println("Turn on caps lock, type in one line with spaces");
+		System.out.println("If you get a X, it means you have it at the right place, if its W, it means it is at the wrong place and none of both means it doesn't exist.");
+		System.out.println("Turn on caps lock, this will be handy, type in one line with spaces");
 		System.out.println("Pickable colors: R,Y,G,B,P");
 
 		String red = "R";
@@ -35,6 +35,7 @@ public class Mastermind {
 		
 		for (int round = 1; round <= 10; round++) {
 
+			System.out.println("");
 			
 			System.out.println("Round " + round);
 			
